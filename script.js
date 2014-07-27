@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	var cody_username = 'cnorm35';
 	var useruri = 'https://api.github.com/users/' + cody_username;
-	var repouri = useruri + '/repos';
+	var cody_repouri = useruri + '/repos';
 
 	$.getJSON(useruri, function(results){
 		var profile_pic = results.avatar_url;
@@ -22,10 +22,10 @@ $(document).ready(function(){
 		$('#cody-location').append(location);	
 	});
 
-	$.getJSON(repouri, function(data){
+	$.getJSON(cody_repouri, function(data){
 		if(data.length == 0)
 		{
-			no_results = 'No repos listed.';
+			no_results = '<h3>No repos listed.</h3>';
 		}
 		else
 		{
@@ -33,10 +33,10 @@ $(document).ready(function(){
 				// var link = data[index].html_url;
 				// var name = data[index].name;
 				var output = '<ul>'
-				output =  output + '<li><a href="'+data[index].html_url +'">' + data[index].name + '</a></li>';
+				output =  output + '<li><a href="'+data[index].html_url +'" class="btn btn-primary btn-md">' + data[index].name + '</a></li>';
 				output = output + '</ul>'
-				console.log(output);
-				$('#search-results').append(output);
+				// console.log(output);
+				$('#cody-repos').append(output);
 			});
 				
 				
@@ -44,10 +44,11 @@ $(document).ready(function(){
 	})
 
 
-
+//------------matt inital info request--------------
 
 	var matt_username = 'mattlambdin';
 	var useruri = 'https://api.github.com/users/' + matt_username;
+	var matt_repouri = useruri + '/repos'; 
 		$.getJSON(useruri, function(results){
 		var profile_pic = results.avatar_url;
 		var username = 	results.login;
@@ -65,9 +66,39 @@ $(document).ready(function(){
 		$('#matt-email').append(email);
 		$('#matt-location').append(location);	
 	});
+
+		//-------------------Matt Repo Request--------------------//
+
+
+		$.getJSON(matt_repouri, function(data){
+		if(data.length == 0)
+		{
+			var output = '<h3>No repos listed.</h3>';
+			$('#search-results').append(output);
+		}
+		else
+		{
+			$.each(data, function(index){
+				// var link = data[index].html_url;
+				// var name = data[index].name;
+				var output = '<ul>'
+				output =  output + '<li><a href="'+data[index].html_url +'" class="btn btn-primary btn-md" target="_blank" >' + data[index].name + '</a></li>';
+				output = output + '</ul>'
+				// console.log(output);
+				$('#matt-repos').append(output);
+			});
+				
+				
+		}
+	})
+
+
+//-----------Curtis profile Request--------///////
+
 		var curtis_username = 'handcold';
-		var useruri = 'https://api.github.com/users/' + curtis_username;
-		$.getJSON(useruri, function(results){
+		var curtis_useruri = 'https://api.github.com/users/' + curtis_username;
+		var curtis_repouri = curtis_useruri + '/repos';
+		$.getJSON(curtis_useruri, function(results){
 		var profile_pic = results.avatar_url;
 		var username = 	results.login;
 		var gh_link = results.html_url;
@@ -85,8 +116,27 @@ $(document).ready(function(){
 		$('#curtis-location').append(location);	
 	});
 
-
-
-
-
-})
+		//-----------Curtis Repo Requests------------
+		$.getJSON(curtis_repouri, function(data)
+		{
+			if(data.length == 0)
+			{
+				var output = '<h3>No repos listed.</h3>';
+				$('#search-results').append(output);
+			}
+			else
+			{
+				$.each(data, function(index){
+					// var link = data[index].html_url;
+					// var name = data[index].name;
+					var output = '<ul>'
+					output =  output + '<li><a href="'+data[index].html_url +'" class="btn btn-primary btn-md" target="_blank" >' + data[index].name + '</a></li>';
+					output = output + '</ul>'
+					// console.log(output);
+					$('#curtis-repos').append(output);
+				});
+			}
+			
+		});	
+			
+});
