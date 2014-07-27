@@ -67,5 +67,22 @@ li {
 	list-style-type: none;
 }
 
+#search-pic {
+	height: 75px;
+	width: 75px;
+	display: inline-block;
+}
+
+#search-info h4 {
+	display: block;
+}
+
+#user-results {
+	margin-top: 10px;
+}
+
+#loader	{
+	margin-left: 25px;
+}
 
 

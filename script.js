@@ -138,5 +138,55 @@ $(document).ready(function(){
 			}
 			
 		});	
-			
+
+
+		$('#search-btn').on('click', function(){
+			$('#user-results').html('<img id="loader" src="ajax-loader.gif">');
+			var username = $('#search-users').val();
+			var requesturi = 'https://api.github.com/users/' + username;
+			$.getJSON(requesturi, function(results){
+				var first_name = results.name;
+				var username = results.login;
+				var link = results.html_url;
+				var profile_pic = results.avatar_url;
+				var email = results.email;
+				var output = '<div class="col-lg-12"> \
+							<div id="search-info" class="col-sm-5"> \
+							<img src="' + profile_pic + '" id="search_pic" class="img-circle"/>  \
+								<h4>First Name: ' + first_name + '</h4>  \
+								<h4>User Name: ' + username + '</h4>  \
+								<h4>Link: <a href="' + link + '">' + link + '</h4></a>  \
+								<h4>Email: ' + email + '</h4> \
+							</div> \
+							</div>';
+				$('#user-results').html(output);
+				
+
+
+			})
+		})
+		
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
