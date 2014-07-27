@@ -1,0 +1,42 @@
+#dojo-logo {
+	height: 40px;
+	width: 150px;
+}
+
+.jumbotron {
+	background: url('stardust.png');
+	height: 250px;
+}
+
+#tagline {
+	color: white;
+	display: inline-block;
+}
+
+#ghlogo {
+	height: 50px;
+	width: 50px;
+	margin-left: 20px;
+}
+
+.img-circle {
+	height: 75px;
+	width: 75px;
+	display: inline-block;
+}
+
+.col-md-4 {
+	border:1px solid #eee;
+}
+.user-info{
+	display: block;
+}
+
+.user-content {
+	display: inline;
+}
+
+.col-xs-3 {
+	margin: 10px 0px;
+}
+
