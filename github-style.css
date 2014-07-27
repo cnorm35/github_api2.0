@@ -6,6 +6,7 @@
 .jumbotron {
 	background: url('stardust.png');
 	height: 250px;
+	margin-bottom: 10px;
 }
 
 #tagline {
@@ -39,4 +40,28 @@
 .col-xs-3 {
 	margin: 10px 0px;
 }
+
+#cody-user-info {
+	margin-bottom: 20px;
+}
+
+#matt-user-info {
+	margin-bottom: 20px;
+}
+
+#curtis-user-info {
+	margin-bottom: 20px;
+}
+
+#search-users {
+	width: 25%;
+	display: inline;
+	margin-left: 10px;
+}
+
+#search-row {
+	margin-left: 10px;
+}
+
+
 

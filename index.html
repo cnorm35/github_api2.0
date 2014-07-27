@@ -31,17 +31,58 @@
 			<h3 id='tagline' >Dojo House Github App</h3>
 			<img id='ghlogo' src='small_github_logo.png'>
 	</div>
+	<div class='row' id='search-row'>
+		<input type='text' id='search-users'class='form-control' placeholder='Search users...'/>
+		<button class='btn btn-success bt-default'><i class='icon-white icon-search'></i>Search</button>
+	</div>
+
 	<div class='row'>
 		<div class='col-md-4 display-area'>
-			<h4>Name</h4>
+			<h4>Cody</h4>
 			<div class='col-xs-5'>
-				<img src="gravatar.png" class='img-circle'>
+				<img src="gravatar.png" class='img-circle' id='cody-profile-pic'>
 			</div>
+			<div class='col-xs-5' id='cody-user-info'>
+				<a href='#' class='user-info' id='cody-username'></a>
+				<a href='#'class='user-info' id='cody-link'></a>
+				<a href='#' class='user-info' id='cody-email'></a>
+				<a href='#' class='cody-member-since' id='cody-location'></a>
+			</div>
+			<!-- <div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div> -->
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+			<div class='col-xs-3'>
+				<button class='btn btn-inverse btn-md'>Repo</button>
+			</div>
+		</div>
+		<div class='col-md-4 display-area'>
+			<h4>Matt</h4>
 			<div class='col-xs-5'>
-				<a href='#' class='user-info'>username</a>
-				<a href='#'class='user-info'>website</a>
-				<a href='#' class='user-info'>email</a>
-				<a href='#' class='user-info'>member since</a>
+				<img src="gravatar.png" class='img-circle' id='matt-profile-pic'>
+			</div>
+			<div class='col-xs-5' id='matt-user-info'>
+				<a href='#' class='user-info' id='matt-username'></a>
+				<a href='#'class='user-info' id='matt-link'></a>
+				<a href='#' class='user-info' id='matt-email'></a>
+				<a href='#' class='user-info' id='matt-location'></a>
 			</div>
 			<div class='col-xs-3'>
 				<button class='btn btn-inverse btn-md'>Repo</button>
@@ -69,51 +110,15 @@
 			</div>
 		</div>
 		<div class='col-md-4 display-area'>
-			<h4>Name</h4>
+			<h4>Curtis</h4>
 			<div class='col-xs-5'>
-				<img src="gravatar.png" class='img-circle'>
-			</div>
-			<div class='col-xs-5'>
-				<a href='#' class='user-info'>username</a>
-				<a href='#'class='user-info'>website</a>
-				<a href='#' class='user-info'>email</a>
-				<a href='#' class='user-info'>member since</a>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-			<div class='col-xs-3'>
-				<button class='btn btn-inverse btn-md'>Repo</button>
-			</div>
-		</div>
-		<div class='col-md-4 display-area'>
-			<h4>Name</h4>
-			<div class='col-xs-5'>
-				<img src="gravatar.png" class='img-circle'>
+				<img src="gravatar.png" class='img-circle' id='curtis-profile-pic'>
 			</div>
 			<div class='col-xs-5'>
-				<a href='#' class='user-info'>username</a>
-				<a href='#'class='user-info'>website</a>
-				<a href='#' class='user-info'>email</a>
-				<a href='#' class='user-info'>member since</a>
+				<a href='#' class='user-info' id='curtis-username'></a>
+				<a href='#'class='user-info' id='curtis-link'></a>
+				<a href='#' class='user-info' id='curtis-email'></a>
+				<a href='#' class='user-info' id='curtis-location'></a>
 			</div>
 			<div class='col-xs-3'>
 				<button class='btn btn-inverse btn-md'>Repo</button>
@@ -140,6 +145,9 @@
 				<button class='btn btn-inverse btn-md'>Repo</button>
 			</div>
 		</div>	
+	</div>
+
+	<div id='search-results'>
 	</div>
 </body>
 
